@@ -22,7 +22,7 @@ final class DetailCell: UITableViewCell {
     
     var detail: Results? {
         didSet {
-            let imageURL = detail?.artworkUrl100?.replace(target: "100x100", withString: "900x900") ?? ""
+            let imageURL = detail?.artworkUrl100?.replace(target: "100x100", withString: "600x600") ?? ""
             detailImage.sd_setImage(with: URL(string: imageURL))
             titleLabel.text = detail?.collectionName
             descriptionLabel.text = detail?.longDescription

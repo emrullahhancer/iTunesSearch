@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     var showIndicator = false
     var terms: String = "all"
     var wrapperType: String = "movie"
-    let search = UISearchController()
+    let search = UISearchController(searchResultsController: nil)
     let operationsQueue = DispatchQueue.init(
         label: "search_operations_queue",
         qos: .default,
@@ -56,7 +56,7 @@ class HomeViewController: UIViewController {
         collectionView.registerNib(HomeListCell.CellID)
         let layout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.size.width / 2
-        layout.itemSize = CGSize(width: width - 5, height: width * 1.3)
+        layout.itemSize = CGSize(width: width - 5, height: width * 1.4)
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 5

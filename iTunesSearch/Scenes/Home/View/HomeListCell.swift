@@ -22,7 +22,7 @@ final class HomeListCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         df.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dfDate.dateFormat = "dd.MM.yyyy HH:mm"
+        dfDate.setLocalizedDateFormatFromTemplate("dd.MM.yyyy")
     }
 
     var result: Results? {

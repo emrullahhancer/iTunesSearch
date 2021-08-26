@@ -70,10 +70,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if !(viewModel.results?.indices.contains(indexPath.row) ?? false) {
             return
         }
-        guard let detail = viewModel.results?[indexPath.row] else {
-            return
-        }
-        guard let vc = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+        guard let vc = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController, let detail = viewModel.results?[indexPath.row] else {
             return
         }
         vc.detail = detail

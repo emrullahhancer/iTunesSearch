@@ -17,7 +17,7 @@ class APIManager {
         let baseURL = "https://itunes.apple.com/search?"
 
         guard var urlComponents = URLComponents(string: baseURL) else { return }
-        urlComponents.query = "media=\(wrapperType)&term=\(term)&limit=\(limit)"
+        urlComponents.query = "media=\(wrapperType)&term=\(term)&limit=\(limit)&sort=recent"
 
         guard let url = urlComponents.url else { return }
 
